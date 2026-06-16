@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- ensure the browser uses the actual screen width for layout calculations-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Visit Milan - Home</title>
+    <!-- link to the main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- link to font awesome library for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+    
+<body>
+    <!-- site header: contains logo and main navigation -->
+    <header class="site-header">
+        <div class="logo">
+            <a href="home.html">
+                <img src="images/milan-coat-of-arms.png" alt="Milan Coat of Arms" class="logo-image">
+                MILAN EXPLORER
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="food_drink.html">Food & Drink</a></li>
+                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="getting_around.html" class="active">Getting Around</a></li>
+                <li><a href="day_trips.html">Day Trips</a></li>
+                <li><a href="safety.html">Safety Tips</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main current area for the page -->
+    <main>
+        <section class="page-title-band">
+            <h1>Getting Around Milan</h1>
+        </section>
+
+        <!-- container for transport information sections -->
+        <div class="content-section transport-container">
+            <!-- start of overview & tickets section -->
+            <section class="transport-section reveal">
+                <div class="transport-icon">
+                    <i class="fas fa-ticket-alt"></i> </div>
+                <div class="transport-text">
+                    <h2>Overview & Tickets</h2>
+                    <p>Milan's public transport system (Metro, Trams, Buses) is primarily operated by ATM (Azienda Trasporti Milanesi). The same tickets are generally valid across these modes within the urban area.</p>
+                    <p><strong>Ticket Options:</strong></p>
+                    <ul>
+                        <li><strong>Single Ticket:</strong> €2.20 (valid for 90 minutes with transfers allowed).</li>
+                        <li><strong>24-Hour Pass:</strong> €7.60.</li>
+                        <li><strong>3-Day Pass:</strong> €13.00.</li>
+                        <li><strong>10-Trip Carnet:</strong> €19.50 (cannot be shared simultaneously).</li>
+                        <li><strong>YesMilano City Pass:</strong> Includes transport and entry to attractions.</li>
+                    </ul>
+                    <p>Tickets can be bought at Metro stations (machines, some newsstands/bars/tobacco shops), authorised sellers, via the ATM Milano app or sometimes via SMS.</p>
+                </div>
+            </section>
+
+            <!-- start of contactless payment section -->
+            <section class="transport-section reveal">
+                <div class="transport-icon">
+                     <i class="fas fa-credit-card"></i> </div>
+                <div class="transport-text">
+                    <h2>Contactless Payment</h2>
+                    <p>Milan offers easy contactless payment directly at the validators using credit cards, debit cards (Mastercard, Visa, Maestro, VPay), or smartphone/watch payment apps (Apple Pay, Google Pay, etc.).</p>
+                    <ul>
+                        <li>Simply tap your card/device on the reader to enter metro or when boarding buses/trams.</li>
+                        <li><strong>Important:</strong> Always use the <strong>same</strong> card/device to tap in and tap out (especially on the Metro) to ensure the system calculates the correct fare (€2.20 for a standard 90-min urban journey).</li>
+                        <li>The system automatically applies the cheapest fare based on your journeys within a 24-hour period (e.g., capping at the daily pass rate if you make multiple trips).</li>
+                        <li><strong>Note:</strong> Contactless payment is valid on ATM Metro, buses, and trams but <strong>not</strong> currently on Trenord 'S' suburban train lines.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- start of metro section -->
+            <section class="transport-section reveal">
+                <div class="transport-icon">
+                     <i class="fas fa-subway"></i> </div>
+                <div class="transport-text">
+                    <h2>Metro</h2>
+                    <p>Milan's Metro is fast and efficient, with 5 lines:</p>
+                    <ul>
+                        <li><strong>M1 (Red):</strong> Connects north-east to west/south-west (e.g., Sesto F.S., Duomo, Cadorna, Rho Fiera).</li>
+                        <li><strong>M2 (Green):</strong> Connects north-east to south (e.g., Centrale, Cadorna, Porta Genova, Assago Forum).</li>
+                        <li><strong>M3 (Yellow):</strong> Connects north to south-east (e.g., Centrale, Duomo, Montenapoleone).</li>
+                        <li><strong>M4 (Blue):</strong> Connects Linate Airport to the city centre (e.g., San Babila).</li>
+                        <li><strong>M5 (Lilac):</strong> Connects north-east to west (e.g., Garibaldi, San Siro Stadium).</li>
+                    </ul>
+                    <p>Operating hours are generally from around 5:30/6:00 AM to 12:30 AM, but check specific lines/days. Download the official ATM Milano app for maps and schedules.</p>
+                </div>
+            </section>
+
+            <!-- start of buses and trams section -->
+            <section class="transport-section reveal">
+                <div class="transport-icon">
+                     <i class="fas fa-bus-alt"></i> </div>
+                <div class="transport-text">
+                    <h2>Buses & Trams</h2>
+                    <p>An extensive network complements the Metro. Trams, including iconic historical yellow cars on some routes (like Line 1), offer scenic rides through the city. Buses cover areas not reached by Metro or tram.</p>
+                    <p>Operating hours are typically from early morning (around 5 AM) to late night (around 2 AM), with specific night bus routes available after regular services end.</p>
+                    <p>Remember to validate your ticket or use contactless payment when boarding.</p>
+                </div>
+            </section>
+
+            <!-- start of suburban trains section -->
+             <section class="transport-section reveal">
+                <div class="transport-icon">
+                     <i class="fas fa-train"></i> </div>
+                <div class="transport-text">
+                    <h2>Trains (Suburban)</h2>
+                    <p>Suburban ('S' lines) and regional trains (Trenord) connect Milan to surrounding towns and areas. The 'Passante Ferroviario' is an underground railway link used by many S lines, intersecting with Metro lines at key stations like Porta Garibaldi, Repubblica, and Porta Venezia.</p>
+                    <p>Standard ATM urban tickets (€2.20) are valid on S lines within the Milan urban boundaries (check maps for zone limits). Contactless payment is generally <strong>not</strong>  accepted on S lines, use a paper ticket or travel card.</p>
+                </div>
+            </section>
+
+            <!-- start of airport connections section -->
+            <section class="transport-section reveal">
+                <div class="transport-icon">
+                    <i class="fas fa-plane-departure"></i> </div>
+                <div class="transport-text">
+                    <h2>Airport Connections</h2>
+                    <ul>
+                        <li><strong>Malpensa (MXP):</strong>
+                            <ul>
+                                <li><strong>Train:</strong> Malpensa Express train to Cadorna, Centrale, or Garibaldi stations (fastest service).</li>
+                                <li><strong>Bus:</strong> Several companies (e.g., Terravision, Malpensa Shuttle) offer coach services to Stazione Centrale (approx. 50 mins, ~€10).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Linate (LIN):</strong>
+                             <ul>
+                                <li><strong>Metro:</strong> M4 (Blue line) directly connects the airport to the city centre (e.g., San Babila). This is often the fastest and most convenient.</li>
+                                <li><strong>Bus:</strong> Airport Bus Express (approx. 25 mins).</li>
+                             </ul>
+                         </li>
+                         <li><strong>Bergamo (BGY):</strong>
+                             <ul>
+                                <li><strong>Bus:</strong> Several coach companies (e.g., Terravision, Autostradale) run direct services to Milano Centrale station (approx. 50-60 mins, fares vary ~€4-€10+).</li>
+                            </ul>
+                         </li>
+                    </ul>
+                     <p><i>Note: Fares and times are approximate and subject to change. Check official provider websites for the latest info.</i></p>
+                </div>
+            </section>
+
+        </div></main>
+
+    <!-- site footer-->
+    <footer class="site-footer">
+        <p style="text-align:center;">&copy; 2025 Milan Explorer | Created by Sebastians Zudie (24336063) | <a href="#top">Back to Top</a></p>
+    </footer>
+    <!-- link to javascript file for interactivity -->
+    <script src="script.js"></script>
+</body>
+</html>

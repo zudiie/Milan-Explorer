@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- ensure the browser uses the actual screen width for layout calculations-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Visit Milan - Home</title>
+    <!-- link to the main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- link to font awesome library for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+    
+<body>
+    <!-- site header: contains logo and main navigation -->
+    <header class="site-header">
+        <div class="logo">
+            <a href="home.html">
+                <img src="images/milan-coat-of-arms.png" alt="Milan Coat of Arms" class="logo-image">
+                MILAN EXPLORER
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="food_drink.html">Food & Drink</a></li>
+                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="getting_around.html">Getting Around</a></li>
+                <li><a href="day_trips.html">Day Trips</a></li>
+                <li><a href="safety.html" class="active">Safety Tips</a></li>
+                </ul>
+        </nav>
+    </header>
+
+    <!-- main content area for the page -->
+    <main>
+        <section class="page-title-band">
+            <h1>Milan Safety Tips: Staying Secure</h1>
+        </section>
+        
+        <!-- animated safety warning with scrolling text -->
+        <div class="safety-ticker-container">
+            <div class="ticker-content">
+                <!-- warning error -->
+                 <span class="ticker-icon"><i class="fa-solid fa-triangle-exclamation"></i></span>
+                 <!-- container for the scrolling text -->
+                 <div class="ticker-text-container">
+                     <span class="ticker-text">
+                         ATTENZIONE A BORSEGGIATRICI E BORSEGGIATORI - PROTEGGI I TUOI OGGETTI DI VALORE *** BEWARE OF PICKPOCKETS - SECURE YOUR VALUABLES *** ATTENZIONE AI BORSEGGIATORI NEL METRO E VICINO AL DUOMO *** BEWARE OF PICKPOCKETS ON METRO & NEAR DUOMO ***
+                     </span>
+                 </div>
+            </div>
+        </div>
+
+        <!-- container for safety tip content sections -->
+        <div class="content-section">
+
+            <!-- start of pickpocket warning section -->
+            <section class="food-item reveal"> 
+                <div class="food-image">
+                    <img src="images/safety-crowd.jpg" alt="Crowded square in Milan">
+                </div>
+                <div class="food-text"> 
+                    <h2><i class="fas fa-user-secret"></i> Beware of Pickpockets ('Borseggiatori')</h2>
+                    <p>This is the most common issue tourists face, especially in crowded areas. Pickpockets often work in teams and use distraction techniques.</p>
+                    <p><strong>High-Risk Areas:</strong> Duomo Square & Galleria, Metro (especially lines M1, M2, M3 during boarding), Central Station (Stazione Centrale), busy shopping streets, and trams (especially historic ones popular with tourists).</p>
+                    <p><strong>Prevention:</strong> Keep valuables in front pockets or secure inner pockets. Use bags with zippers that close securely and carry them in front of you. Avoid displaying expensive jewellery or large amounts of cash. Be extra vigilant when people bump into you or try to distract you.</p>
+                </div>
+            </section>
+
+            <!-- start of general awareness tip section -->
+            <section class="safety-tip-section reveal">
+                 <h2><i class="fas fa-eye"></i> General Awareness & Valuables</h2>
+                 <p>Maintain awareness of your surroundings, especially when using your phone or looking at maps. Avoid leaving bags unattended or hanging on the back of chairs in cafes/restaurants.</p>
+                 <p>Only carry the cash you need for the day. Use ATMs inside banks during opening hours if possible, rather than isolated ones on the street late at night. Be discreet when handling money.</p>
+                 <p>Be cautious of unsolicited 'help' with luggage or aggressive street vendors – sometimes these are distractions for pickpocketing.</p>
+            </section>
+
+            <!-- start of public transport safety section -->
+            <section class="food-item reveal">
+                <div class="food-image">
+                     <img src="images/safety-metro.jpg" alt="Inside a Milan Metro car">
+                </div>
+                <div class="food-text">
+                    <h2><i class="fas fa-bus-simple"></i> Public Transport Safety</h2>
+                    <p>As mentioned, the Metro and trams are prime spots for pickpockets due to crowding.</p>
+                    <p>Have your ticket or contactless payment ready before entering the station or boarding to avoid fumbling with your wallet. Secure your belongings <strong> before</strong> the doors open. Be especially alert during the rush to get on and off, as this is when pickpockets often strike.</p>
+                    <p>If possible, avoid overly packed carriages and move away from the doors once onboard if you feel uncomfortable.</p>
+                </div>
+            </section>
+
+            <!-- start of night safety & emergencies tip section -->
+            <section class="safety-tip-section reveal">
+                 <h2><i class="fas fa-shield-alt"></i> Night Safety & Emergencies</h2>
+                 <p>Milan is generally safe at night, but it's always wise to stick to well-lit, populated streets, especially if alone. Avoid walking through dark parks or poorly lit alleyways late at night.</p>
+                 <p>Know how you'll get back to your accommodation, use reputable taxis (look for official city markings) or ride-sharing apps if needed.</p>
+                 <p><strong>Emergency Number:</strong> The single European emergency number is <strong>112</strong>. This number can be called free from any phone to reach police (Polizia), ambulance (ambulanza) or fire brigade (Vigili del Fuoco).</p>
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- site footer -->
+    <footer class="site-footer">
+        <p style="text-align:center;">&copy; 2025 Milan Explorer | Created by Sebastians Zudie (24336063) | <a href="#top">Back to Top</a></p>
+    </footer>
+
+    <!-- link to javasciipt file for interactivity -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- ensure the browser uses the actual screen width for layout calculations-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Visit Milan - Home</title>
+    <!-- link to the main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+    
+<body>
+    <!-- site header: contains logo and main navigation -->
+    <header class="site-header">
+        <div class="logo">
+            <a href="home.html">
+                <img src="images/milan-coat-of-arms.png" alt="Milan Coat of Arms" class="logo-image">
+                MILAN EXPLORER
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="food_drink.html" class="active">Food & Drink</a></li>
+                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="getting_around.html">Getting Around</a></li>
+                <li><a href="day_trips.html">Day Trips</a></li>
+                <li><a href="safety.html">Safety Tips</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main content area of the page -->
+    <main>
+        <!-- coloured band containing the main page title -->
+        <section class="page-title-band">
+            <h1>Taste of Milan: Food & Drink Guide</h1>
+        </section>
+
+        <!-- wrapper for the main content sections -->
+        <div class="content-section">
+            <!-- start of a food/drink item block (image left, text right) -->
+            <section class="food-item reveal">
+                <!-- image container for the food item -->
+                <div class="food-image">
+                    <img src="images/milan-breakfast.jpg" alt="Classic Italian breakfast with coffee and croissant">
+                </div>
+                <!-- text container for the food item -->
+                <div class="food-text">
+                    <!-- heading for the food item -->
+                    <h2>
+                        Morning Ritual: Coffee & Cornetto
+                        <!-- info icon - clickable, triggers popup -->
+                        <span class="info-icon" data-info="Did you know? Italians typically drink cappuccino only in the morning, considering it too heavy after meals!">ⓘ</span> </h2>
+                    <p>Start your Milanese day like a local! Dive into one of the city's countless bustling cafés for a truly authentic experience. Grab a rich, aromatic espresso or a creamy cappuccino – often surprisingly cheap – paired with a fresh 'cornetto' (Italy's answer to the croissant). This perfect combo can often be enjoyed for around €4.</p>
+                    <p>While choices abound, locals love places like <strong>Cornetiamo</strong> for their beautiful pastries and welcoming atmosphere. It's the perfect fuel for a day of exploring!</p>
+                </div>
+            </section>
+
+            <!-- start of an alternate layout food/drink item block (text left, image right) -->
+            <section class="food-item alt-layout reveal"> <div class="food-image">
+                    <img src="images/milan-pasta.jpg" alt="Freshly made pasta dish at Miscusi"> </div>
+                <div class="food-text">
+                    <h2>
+                        Handmade Pasta Perfection
+                        <span class="info-icon" data-info="Did you know? There are over 350 official shapes of pasta in Italy, each designed to hold sauce in a unique way!">ⓘ</span> </h2>
+                    <p>You can't visit Italy without indulging in pasta! While Milan has endless options, seek out places that celebrate freshness and tradition. A standout favourite is <strong>Miscusi</strong>, renowned for its vibrant setting and delicious, homemade pasta crafted right in front of you.</p>
+                    <p>Choose your pasta shape, pick a mouthwatering sauce, and savour the authentic taste of Italy. It's a simple yet unforgettable culinary delight that defines Italian comfort food.</p>
+                </div>
+            </section>
+
+            <!-- start of a standard layout food/drink item block -->
+            <section class="food-item reveal">
+                <div class="food-image">
+                    <img src="images/milan-pizza.jpg" alt="Thick Milanese 'al trancio' pizza"> </div>
+                <div class="food-text">
+                    <h2>
+                        More Than Just Naples: Milanese Pizza
+                        <span class="info-icon" data-info="Did you know? Milan has its own pizza style called 'Pizza al Trancio' – typically rectangular, thick-crusted, and sold by the slice!">ⓘ</span> </h2>
+                    <p>While Naples may be the birthplace of pizza, Milan offers its own delicious takes on this beloved dish. You'll find excellent traditional Neapolitan-style pizzas with thin crusts and simple toppings, but don't miss trying the local favourite - <strong>Pizza al Trancio. </strong></p>
+                    <p>Often baked in large rectangular pans and sold by the hearty slice ('trancio'), this style features a thicker, focaccia-like crust. Perfect for a quick, satisfying, and truly Milanese bite!</p>
+                </div>
+            </section>
+            <!-- start of an alternate layout food/drink item block -->
+            <section class="food-item alt-layout reveal">
+                <div class="food-image">
+                    <img src="images/milan-aperitivo.jpg" alt="Classic Aperol Spritz cocktail with appetizers"> </div>
+                <div class="food-text">
+                    <h2>
+                        The Art of Aperitivo & Milanese Drinks
+                        <span class="info-icon" data-info="Did you know? The Negroni Sbagliato ('mistaken Negroni') was invented in Milan at Bar Basso when a bartender accidentally grabbed prosecco instead of gin!">ⓘ</span> </h2>
+                    <p>You really have to try Aperitivo when you're in Milan! It's a popular pre-dinner tradition, usually happening between 6 pm and 9 pm, and a big part of local life. Order a classic drink like an Aperol Spritz, a Campari Soda, or the Milan-invented Negroni Sbagliato.</p>
+                    <p>Your drink unlocks access to a often-generous buffet ('stuzzichini') featuring olives, nuts, cheeses, cured meats, mini pizzas, pastas, and more. It's the perfect way to relax, socialise, and ease into the evening. Find a bustling bar, grab a drink, and enjoy!</p>
+                </div>
+            </section>
+            <!-- start of a regular layout food/drink item block (text left, image right) -->
+            <section class="food-item reveal">
+                <div class="food-image">
+                    <img src="images/milan-gelato.jpg" alt="Italian gelato"> </div>
+                <div class="food-text">
+                    <h2>
+                        The Grand Finale: Gelato!
+                        <span class="info-icon" data-info="Did you know? Real Italian gelato has less fat and significantly less air whipped into it than typical ice cream, resulting in a denser texture and more intense flavour!">ⓘ</span> </h2>
+                    <p>No trip to Italy, especially Milan, is complete without indulging in traditional gelato. Forget standard ice cream, true Italian gelato is a revelation! Made with fresh ingredients and less air, its flavours are incredibly intense and the texture is unbelievably smooth.</p>
+                    <p>From classic flavours like pistachio and stracciatella to seasonal fruit sorbettos, find a local 'gelateria' and treat yourself. It's pure, simple, delicious happiness in a cup or cone!</p>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- hidden popup structure for displaying info icon details -->
+    <div id="info-popup" class="info-popup-overlay">
+        <!-- content area within the popup -->
+        <div class="info-popup-content">
+            <!-- close button for the popup -->
+            <span class="info-popup-close">&times;</span>
+            <!-- paragraph where the info text will be inserted by script.js -->
+            <p id="info-popup-text">Interesting fact will appear here</p>
+        </div>
+    </div>
+    
+    <!-- site footer -->
+    <footer class="site-footer">
+        <p style="text-align:center;">&copy; 2025 Milan Explorer | Created by Sebastians Zudie (24336063) | <a href="#top">Back to Top</a></p> 
+    </footer>
+    
+    <!-- link to javascript file for interactivity -->
+    <script src="script.js"></script>
+</body>
+</html>

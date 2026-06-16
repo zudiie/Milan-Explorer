@@ -1,0 +1,1102 @@
+/* === global styles (all pages) === */
+
+/* body element styling */
+body {
+    margin: 0;
+    font-family: 'montserrat', sans-serif;
+    background-color: #ffffff; /* white */
+    color: #333; /* dark grey */
+    line-height: 1.6;
+    padding-top: 85px; /* offset for fixed header */
+}
+
+/* global image styling */
+img {
+    max-width: 100%; /* ensures images are responsive */
+    height: auto;
+    display: block; /* removes extra space below images */
+}
+
+/* global anchor link styling */
+a {
+    color: #d10024; /* milan red */
+    text-decoration: none; /* remove default underline */
+}
+
+/* global anchor link hover state */
+a:hover {
+    text-decoration: underline; /* add underline on hover */
+}
+
+/* global paragraph styling */
+p {
+    text-align: justify; /* justify paragraph text */
+    margin-bottom: 1em;
+}
+
+/* general container for main content sections */
+.content-section {
+    padding: 20px 5%;
+    max-width: 1200px; /* limit content width */
+    margin: 20px auto; /* center content block */
+}
+
+/* === header & navigation (all pages) === */
+
+/* site header container */
+.site-header {
+    background-color: #f8f8f8; /* very light grey */
+    padding: 10px 5%;
+    display: flex; /* use flexbox for layout */
+    justify-content: space-between; /* space out logo and nav */
+    align-items: center; /* vertically align items */
+    border-bottom: 1px solid #eee; /* light grey */
+    flex-wrap: wrap; /* allow items to wrap on smaller screens */
+    font-family: 'montserrat', sans-serif;
+    position: fixed; /* keep header fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100; /* ensure header stays above other content */
+    box-sizing: border-box; /* include padding and border in the element's total width and height */
+}
+
+/* logo link styling */
+.logo a {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #333; /* dark grey */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    white-space: nowrap; /* prevent logo text from wrapping */
+    margin-right: 10px;
+}
+
+/* logo image styling */
+.logo-image {
+    height: 30px;
+    width: auto;
+    margin-right: 8px;
+}
+
+/* main navigation list */
+.main-nav ul {
+    list-style: none; /* remove default list bullets */
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+/* main navigation list items */
+.main-nav li {
+    margin: 0 5px;
+}
+
+/* main navigation links */
+.main-nav a {
+    text-decoration: none;
+    color: #333333; /* dark grey */
+    padding: 8px 12px;
+    border-radius: 4px;
+    /* smooth transition for hover effects */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+/* main navigation active/hover state */
+.main-nav a.active, .main-nav a:hover {
+    background-color: #d10024; /* milan red */
+    color: #fff; /* white */
+    text-decoration: none;
+}
+
+/* === footer (all pages) === */
+
+/* site footer container */
+.site-footer {
+    background-color: #333; /* dark grey */
+    color: #ccc; /* grey */
+    text-align: center;
+    padding: 20px 5%;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+/* paragraph within footer */
+.site-footer p {
+    margin: 0;
+    text-align: center;
+}
+
+/* links within footer */
+.site-footer a {
+    color: #cfb53b; /* gold */
+}
+/* footer link hover state */
+.site-footer a:hover {
+    color: #fff; /* white */
+}
+
+/* === scroll reveal animation === */
+
+/* initial state for elements to be revealed on scroll */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px); /* start slightly lower */
+    /* smooth transition for opacity and position */
+    transition: opacity 0.8s ease-out, transform 0.6s ease-out;
+    /* hint to browser that these properties will change, for potential optimization */
+    will-change: opacity, transform;
+}
+
+/* visible state for revealed elements */
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0); /* move to final position */
+}
+
+/* === home page styles (home.html) === */
+
+/* slideshow container */
+.slideshow-container {
+    max-width: 1200px;
+    position: relative; /* needed for absolute positioning of arrows/dots */
+    margin: 20px auto;
+}
+
+/* individual slides */
+.slides {
+    display: none; /* hide all slides by default */
+}
+
+/* slideshow images */
+.slides img {
+    vertical-align: middle; /* fix potential alignment issues */
+    height: 450px;
+    /* crop and center image to fit fixed height */
+    object-fit: cover;
+    width: 100%;
+}
+
+/* slideshow navigation arrows */
+.prev, .next {
+    cursor: pointer;
+    position: absolute; /* position arrows over the slideshow */
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px; /* adjust vertical position */
+    color: white; /* white */
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.6s ease;
+    border-radius: 0 3px 3px 0; /* rounded corners on one side */
+    user-select: none; /* prevent text selection on arrows */
+    background-color: rgba(0,0,0,0.4); /* semi-transparent black */
+}
+
+/* slideshow 'next' arrow positioning */
+.next {
+    right: 0; /* position next arrow on the right */
+    border-radius: 3px 0 0 3px; /* rounded corners on the other side */
+}
+
+/* slideshow arrow hover state */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.7); /* darker background on hover */
+}
+
+/* container for slideshow dots */
+.dots-container {
+    text-align: center;
+    padding: 10px 0;
+    position: absolute; /* position dots over the slideshow */
+    bottom: 15px;
+    width: 100%;
+}
+
+/* individual dots */
+.dot {
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 4px;
+    background-color: rgba(255, 255, 255, 0.5); /* semi-transparent white */
+    border-radius: 50%; /* make dots circular */
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    border: 1px solid rgba(0, 0, 0, 0.2); /* subtle border */
+}
+
+/* active dot state and hover state */
+.active-dot, .dot:hover {
+    background-color: rgba(255, 255, 255, 0.9); /* brighter white */
+}
+
+/* fade animation class for slides */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+/* fade animation keyframes */
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* homepage introductory text heading */
+.intro-text h2 {
+    color: #d10024; /* milan red */
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+/* homepage features grid container */
+.features-grid {
+    display: grid; /* use css grid layout */
+    /* create 5 equal columns */
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px; /* space between grid items */
+}
+
+/* individual feature box */
+.feature-box {
+    border: 1px solid #eee; /* light grey */
+    border-bottom: 4px solid #cfb53b; /* gold */
+    border-radius: 10px;
+    overflow: hidden; /* hide overflowing content (like zoomed image) */
+    position: relative; /* needed for absolute positioning of overlay */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f9f9f9; /* near white */
+}
+
+/* feature box image */
+.feature-box img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* crop image */
+    transition: transform 0.3s ease;
+}
+
+/* text overlay for feature box */
+.box-overlay {
+    position: absolute; /* position overlay over the bottom of the box */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* dark gradient from bottom up */
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 50%, rgba(0,0,0,0) 100%);
+    color: #fff; /* white */
+    padding: 20px 10px 10px 10px;
+    opacity: 0; /* hidden by default */
+    transition: opacity 0.4s ease; /* fade in transition */
+    text-align: center;
+}
+
+/* feature box hover effects */
+.feature-box:hover {
+    transform: translateY(-3px); /* slight lift effect */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12); /* add shadow */
+}
+
+/* feature box image hover effect */
+.feature-box:hover img {
+    transform: scale(1.05); /* zoom image slightly */
+}
+
+/* feature box overlay hover effect */
+.feature-box:hover .box-overlay {
+    opacity: 1; /* show overlay */
+}
+
+/* feature box overlay heading */
+.box-overlay h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.1em;
+    color: #fff; /* white */
+}
+/* feature box overlay paragraph */
+.box-overlay p {
+    font-size: 0.9em;
+    margin-bottom: 0;
+    color: #eee; /* light grey */
+    text-align: center;
+}
+
+/* homepage enquiry form section */
+.enquiry-form {
+    background-color: #f1f1f1; /* light grey */
+    padding: 30px 5%;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+/* enquiry form heading */
+.enquiry-form h2 {
+    text-align: center;
+    color: #d10024; /* milan red */
+    margin-bottom: 25px;
+}
+
+/* form input group styling */
+.form-group {
+    margin-bottom: 18px;
+}
+
+/* form input label */
+.form-group label {
+    display: block; /* place label above input */
+    margin-bottom: 6px;
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+/* form input fields (text, email, textarea) */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc; /* grey */
+    border-radius: 4px;
+    box-sizing: border-box; /* include padding in width */
+    font-family: inherit; /* use body font */
+    font-size: 1em;
+}
+/* form textarea specific styling */
+.form-group textarea {
+    resize: vertical; /* allow vertical resizing only */
+}
+
+/* form submit button */
+.enquiry-form button {
+    background-color: #cfb53b; /* gold */
+    color: #333; /* dark grey */
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    font-family: inherit;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: block; /* make it a block element for centering */
+    width: auto; /* button width based on content */
+    min-width: 150px;
+    margin: 20px auto 0; /* center button horizontally */
+}
+
+/* form submit button hover state */
+.enquiry-form button:hover {
+    background-color: #b8a034; /* darker gold */
+    transform: translateY(-2px); /* lift effect */
+}
+
+/* message area for form feedback */
+#form-message {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    min-height: 1.5em; /* reserve space to prevent layout shift */
+}
+
+
+/* === content page title band === */
+
+/* title band container */
+.page-title-band {
+    background-color: #d10024; /* milan red */
+    color: #fff; /* white */
+    padding: 30px 5%;
+    text-align: center;
+    margin-bottom: 40px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15); /* subtle shadow */
+}
+
+/* title band heading */
+.page-title-band h1 {
+    margin: 0;
+    font-size: 2.4em;
+    font-weight: bold;
+    font-family: 'montserrat', sans-serif;
+}
+
+/* === shared content section layout (food_drink, attractions, getting_around, safety) === */
+
+/* base style for content blocks (e.g., food items, transport methods, safety tips) */
+.food-item,
+.transport-section {
+    display: flex; /* use flexbox for layout */
+    align-items: center; /* vertically align items */
+    margin-bottom: 40px;
+    gap: 30px; /* space between flex items (image/text or icon/text) */
+    background-color: #fdfdfd; /* off white */
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08); /* subtle shadow */
+    overflow: hidden; /* prevent content spillover */
+}
+
+/* modifier class to reverse layout (text left, image right) */
+.food-item.alt-layout {
+    flex-direction: row-reverse; /* reverse the order of flex items */
+}
+
+/* image within a food/attraction item */
+.food-item img {
+    border-radius: 5px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* image container sizing for food/attraction items */
+.food-image {
+    /* image takes up 40% of the width, doesn't grow or shrink */
+    flex: 0 0 40%;
+}
+
+/* text container for food/attraction/transport/safety items */
+.food-text,
+.transport-text { /* apply text styles to safety section too */
+    /* text container takes remaining space, can grow and shrink */
+    flex: 1 1 auto;
+}
+
+/* headings within content sections */
+.food-text h2,
+.transport-text h2 {
+    color: #333; /* dark grey */
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-family: 'montserrat', sans-serif;
+    font-size: 1.6em;
+}
+
+/* ensure headings with icons align correctly */
+.food-text h2 {
+    display: flex;
+    align-items: center; /* align icon and text vertically */
+}
+
+/* paragraphs and lists within content sections */
+.food-text p, .transport-text p,
+.food-text ul, .transport-text ul{
+    line-height: 1.7;
+    color: #555; /* medium dark grey */
+    margin-bottom: 12px;
+}
+
+/* list styling within content sections */
+.food-text ul, .transport-text ul{
+    list-style: disc; /* default disc bullets */
+    margin-left: 20px;
+    padding-left: 10px;
+}
+/* list item styling within content sections */
+.food-text ul li, .transport-text ul li {
+    margin-bottom: 8px;
+}
+
+/* nested list styling (used in getting_around) */
+.transport-text ul ul {
+    list-style: circle; /* circle bullets for nested lists */
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+
+/* strong text styling within content sections */
+.food-text strong,
+.transport-text strong{
+    font-weight: 600;
+    color: #333; /* dark grey */
+}
+/* specific color for highlighted text in food/attractions/safety */
+.food-text strong { /* refined selector */
+    color: #d10024; /* milan red */
+}
+
+/* icon styling within headings (food, safety) */
+.food-text h2 i, .safety-tip-section h2 i {
+    margin-right: 10px;
+    color: #d10024; /* milan red */
+    font-size: 0.9em; /* relative to heading size */
+    vertical-align: middle; /* align icon nicely with text */
+}
+
+
+/* === food & drink page styles (food_drink.html) === */
+
+/* info icon styling */
+.info-icon {
+    display: inline-block;
+    margin-left: 10px;
+    background-color: #cfb53b; /* gold */
+    color: white; /* white */
+    border-radius: 50%; /* circular shape */
+    width: 22px;
+    height: 22px;
+    line-height: 22px; /* vertically center text */
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    user-select: none; /* prevent text selection */
+    vertical-align: middle; /* align with surrounding text */
+}
+
+/* info icon hover state */
+.info-icon:hover {
+    background-color: #b8a034; /* darker gold */
+    transform: scale(1.1); /* slight zoom effect */
+}
+
+/* info popup overlay */
+.info-popup-overlay {
+    display: none; /* hidden by default */
+    position: fixed; /* position relative to viewport */
+    z-index: 1000; /* ensure it's above other content */
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.65); /* semi-transparent black */
+    /* use flexbox to center the popup content */
+    justify-content: center;
+    align-items: center;
+}
+
+/* visible state for the popup overlay */
+.info-popup-overlay.visible {
+    display: flex; /* show the overlay */
+    animation: fadeinoverlay 0.3s ease-out; /* apply fade-in animation */
+}
+
+/* keyframes for overlay fade-in */
+@keyframes fadeinoverlay {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* popup content box */
+.info-popup-content {
+    background-color: #fff; /* white */
+    margin: auto; /* center horizontally (along with flex) */
+    padding: 30px 35px;
+    border: none;
+    width: 85%;
+    max-width: 500px; /* limit maximum width */
+    border-radius: 8px;
+    position: relative; /* needed for absolute positioning of close button */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* popup shadow */
+    animation: fadeinpopup 0.3s ease-out; /* apply fade-in animation */
+}
+
+/* keyframes for popup content fade-in/scale-up */
+@keyframes fadeinpopup {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+
+/* popup close button */
+.info-popup-close {
+    color: #aaa; /* medium grey */
+    position: absolute; /* position inside the content box */
+    top: 10px;
+    right: 15px;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1; /* prevent extra vertical space */
+}
+
+/* popup close button hover/focus state */
+.info-popup-close:hover,
+.info-popup-close:focus {
+    color: #333; /* dark grey */
+    text-decoration: none;
+}
+
+/* text inside the popup */
+#info-popup-text {
+    margin: 0;
+    line-height: 1.6;
+    color: #333; /* dark grey */
+    font-size: 1.1em;
+}
+
+/* === attractions page styles (attractions.html) === */
+/* uses shared .page-title-band and .food-item styles */
+
+
+/* === getting around page styles (getting_around.html) === */
+
+/* specific border for transport sections */
+.transport-section {
+    border-left: 5px solid #D10024; /* milan red */
+}
+
+/* transport icon container */
+.transport-icon {
+    /* icon takes fixed width, doesn't grow or shrink */
+    flex: 0 0 50px;
+    text-align: center;
+}
+
+/* transport icon styling (font awesome) */
+.transport-icon i {
+    font-size: 2.5em;
+    color: #D10024; /* milan red */
+    margin-top: 5px;
+}
+
+/* === day trips page styles (day_trips.html) === */
+
+/* styling for individual day trip sections */
+.trip-section {
+    background-color: #fdfdfd; /* off white */
+    padding: 30px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08); /* subtle shadow */
+    border-left: 5px solid #eee; /* light grey */
+}
+
+/* day trip section title */
+.trip-title {
+    color: #d10024; /* milan red */
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+    text-align: center;
+    border-bottom: 1px solid #eee; /* light grey */
+    padding-bottom: 15px;
+}
+
+/* container for day trip images */
+.trip-images {
+    display: flex; /* arrange images side-by-side */
+    gap: 20px; /* space between images */
+    margin-bottom: 25px;
+}
+
+/* individual day trip image */
+.trip-image {
+    width: 100%;
+    height: 340px;
+    object-fit: cover; /* crop image */
+    display: block;
+    border-radius: 5px;
+    flex: 1; /* allow images to share space equally */
+}
+
+/* paragraphs within day trip details */
+.trip-details p {
+    line-height: 1.7;
+    color: #555; /* medium dark grey */
+    margin-bottom: 1em;
+    text-align: justify; /* justify text */
+}
+
+/* travel info block within day trip section */
+.trip-travel-info {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f5f5f5; /* very light grey */
+    border-radius: 5px;
+    border-top: 3px solid #d10024; /* milan red */
+    display: flex;
+    align-items: flex-start; /* align icon top with text top */
+    gap: 20px;
+}
+
+/* travel info icon container */
+.trip-travel-info .travel-icon {
+    flex: 0 0 40px; /* fixed width */
+    text-align: center;
+}
+
+/* travel info icon (font awesome) */
+.trip-travel-info .travel-icon i {
+    font-size: 2.2em;
+    color: #d10024; /* milan red */
+    margin-top: 5px;
+}
+
+/* travel info text container */
+.trip-travel-info .travel-text {
+    flex: 1; /* take remaining space */
+}
+
+/* travel info subheading */
+.trip-travel-info h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333; /* dark grey */
+}
+
+/* travel info list */
+.trip-travel-info ul {
+    list-style: none; /* remove default bullets */
+    padding: 0;
+    margin: 0;
+    color: #444; /* dark grey */
+}
+
+/* travel info list items */
+.trip-travel-info li {
+    margin-bottom: 8px;
+    padding-left: 18px;
+    position: relative; /* needed for custom bullet positioning */
+}
+
+/* custom bullet point for travel info list */
+.trip-travel-info li::before {
+    content: '\203a'; /* css escape sequence for › */
+    position: absolute; /* position relative to list item */
+    left: 0;
+    top: 0px;
+    color: #cfb53b; /* milan red */
+    font-weight: bold;
+}
+
+/* conclusion section at the end of day trips */
+.conclusion-section {
+    margin-top: 50px;
+    padding: 25px;
+    background-color: #f9f9f9; /* near white */
+    border-top: 1px solid #eee; /* light grey */
+    border-bottom: 1px solid #eee; /* light grey */
+    text-align: center;
+}
+
+/* conclusion section heading */
+.conclusion-section h2 {
+    color: #d10024; /* milan red */
+    margin-bottom: 15px;
+}
+
+/* conclusion section paragraph */
+.conclusion-section p {
+    color: #444; /* dark grey */
+    line-height: 1.6;
+    max-width: 800px; /* limit width for readability */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* link styled as a button */
+.button-link {
+    display: inline-block;
+    background-color: #cfb53b; /* gold */
+    color: #333; /* dark grey */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+/* button link hover state */
+.button-link:hover {
+    background-color: #b8a034; /* darker gold */
+    color: #fff; /* white */
+    text-decoration: none;
+    transform: translateY(-2px); /* lift effect */
+}
+
+/* === safety page styles (safety.html) === */
+
+/* styling for text-only safety tip sections */
+.safety-tip-section {
+    padding: 25px;   /* add some padding */
+    margin-bottom: 30px;    /* space below section */
+    background-color: #fdfdfd; /* light background */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08); /* subtle shadow */
+    border-left: 5px solid #eee; /* subtle left border accent */
+}
+
+.safety-tip-section h2 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6em;
+    display: flex; /* align icon and text */
+    align-items: center;
+}
+
+.safety-tip-section p { /
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.safety-tip-section p strong { 
+     font-weight: 600;
+     color: #D10024; /* Use theme red for emphasis */
+}
+
+/* safety ticker container */
+.safety-ticker-container {
+    padding: 5px 2%;
+    border-top: 2px solid #d10024; /* milan red */
+    border-bottom: 2px solid #d10024; /* milan red */
+    overflow: hidden; /* hide overflowing text */
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* ticker content wrapper */
+.ticker-content {
+    display: flex;
+    align-items: center;
+}
+
+/* ticker icon */
+.ticker-icon {
+    color: #d10024; /* milan red */
+    font-size: 1.4em;
+    margin-right: 15px;
+}
+
+/* ticker text container */
+.ticker-text-container {
+    flex-grow: 1; /* allow text container to take available space */
+    overflow: hidden; /* hide text until it scrolls */
+}
+
+/* ticker scrolling text */
+.ticker-text {
+    display: inline-block; /* needed for animation */
+    white-space: nowrap; /* prevent text wrapping */
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #d10024; /* milan red */
+    padding-left: 100%; /* start text off-screen to the right */
+    /* apply scrolling animation */
+    animation: scroll-left 30s linear infinite;
+}
+
+/* ticker scroll animation keyframes */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%); /* start position */
+    }
+    100% {
+        /* move text completely off-screen to the left */
+        transform: translateX(-200%);
+    }
+}
+
+
+/* === media queries (responsive design) === */
+
+/* medium devices (tablets, smaller desktops, < 1100px) */
+@media (max-width: 1100px) {
+    /* make header static on smaller screens */
+    .site-header {
+        position: static;
+    }
+    /* remove top padding needed for fixed header */
+    body {
+        padding-top: 0;
+    }
+
+    /* adjust features grid for responsiveness */
+    .features-grid {
+        /* fit as many columns as possible with min width 280px */
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    /* stack header items vertically */
+    .site-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    /* remove space when logo stacked */
+    .logo a { margin-right: 0; }
+    /* center nav links */
+    .main-nav {
+        width: 100%;
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+    }
+    /* allow nav links to wrap */
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-left: 0;
+    }
+    /* adjust nav item margin */
+    .main-nav li {
+        margin: 5px;
+    }
+}
+
+/* small devices (portrait tablets, large phones, < 768px) */
+@media (max-width: 768px) {
+    /* header static & body padding inherits from previous query */
+
+    /* stack content items (food, attractions, etc.) vertically */
+    .food-item,
+    .food-item.alt-layout,
+    .transport-section, 
+    .safety-tip-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* adjust image size in stacked layout */
+    .food-image {
+        flex-basis: auto; /* reset flex basis */
+        width: 80%;
+        max-width: 350px;
+        margin: 0 auto 20px auto; /* center image */
+    }
+    /* adjust heading alignment in stacked layout */
+     .food-text h2,
+     .safety-tip-section h2 {
+        align-items: baseline; /* better vertical alignment */
+        justify-content: flex-start; /* center heading block */
+     }
+
+    /* reduce page title size */
+    .page-title-band h1 {
+        font-size: 2em;
+    }
+    /* adjust slideshow height */
+    .slides img {
+        height: 300px;
+    }
+
+    /* stack day trip images */
+    .trip-images {
+        flex-direction: column;
+    }
+    /* reduce padding for day trip sections */
+    .trip-section {
+        padding: 20px;
+    }
+
+    /* adjust safety ticker text size */
+    .ticker-text {
+        font-size: 1em;
+        /* optional: adjust animation duration if needed */
+        /* animation-duration: 25s; */
+    }
+    /* adjust safety ticker icon size */
+    .ticker-icon {
+        font-size: 1.2em;
+        margin-right: 10px;
+    }
+}
+
+/* extra small devices (phones, < 576px) */
+@media (max-width: 576px) {
+    /* header static & body padding inherits from previous query */
+
+    /* stack navigation links vertically */
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    /* adjust nav item margin and width */
+    .main-nav li {
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+    }
+    /* make nav link fill list item width */
+    .main-nav a {
+        display: block;
+        padding: 10px 15px;
+    }
+
+    /* stack feature boxes vertically */
+    .features-grid {
+        display: flex; /* override grid */
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* slideshow height inherits 300px */
+    /* further reduce slideshow controls size */
+    .prev, .next { font-size: 14px; padding: 12px; }
+    .dot { height: 10px; width: 10px; margin: 0 3px; }
+
+    /* further reduce page title size */
+    .page-title-band h1 { font-size: 1.8em; }
+
+    /* reduce padding for content sections */
+    .food-item, .transport-section, .safety-tip-section { padding: 20px; }
+    /* reduce heading size in content sections */
+    .food-text h2, .transport-text h2, .safety-tip-section h2 { font-size: 1.4em; }
+
+    /* specific overrides for transport section layout */
+    .transport-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        border-left: none;
+        border-top: 4px solid #d10024;
+    }
+    /* adjust transport icon layout */
+    .transport-icon {
+        flex-basis: auto; /* reset flex basis */
+        margin-bottom: 10px;
+    }
+    /* adjust transport icon size */
+    .transport-icon i { font-size: 2.2em; }
+
+    /* center align list text within transport section */
+    .transport-text ul {
+        text-align: left; /* keep list text left-aligned */
+        display: inline-block; /* allow centering */
+        max-width: 90%; /* prevent list taking full width */
+        padding-left: 20px; /* Example: ensure some indent */
+        margin-left: 0; /* Ensure no leftover auto margin */
+        margin-right: 0; /* Ensure no leftover auto margin */
+        width: auto;
+    }
+
+    /* reduce padding for general content sections */
+    .content-section { padding: 15px 4%; }
+    /* reduce padding for enquiry form */
+    .enquiry-form { padding: 25px 4%; }
+    /* make enquiry form button wider */
+    .enquiry-form button { width: 90%; max-width: none; }
+
+    /* stack day trip travel info vertically */
+    .trip-travel-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    /* ensure travel text takes full width */
+    .trip-travel-info .travel-text {
+        width: 100%;
+    }
+    /* center align list text within travel info */
+    .trip-travel-info ul {
+        text-align: left;
+        display: inline-block;
+        max-width: 90%;
+    }
+    /* adjust travel list item padding */
+    .trip-travel-info li {
+        padding-left: 15px;
+    }
+    /* reduce button size */
+     .button-link {
+        padding: 8px 15px;
+        font-size: 0.9em;
+     }
+}

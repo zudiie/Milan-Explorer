@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- ensure the browser uses the actual screen width for layout calculations-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Visit Milan - Home</title>
+    <!-- link to the main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+    
+<body>
+    <!-- site header: contains logo and main navigation -->
+    <header class="site-header">
+        <div class="logo">
+            <a href="home.html">
+                <img src="images/milan-coat-of-arms.png" alt="Milan Coat of Arms" class="logo-image">
+                MILAN EXPLORER
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="food_drink.html">Food & Drink</a></li>
+                <li><a href="attractions.html" class="active">Attractions</a></li> 
+                <li><a href="getting_around.html">Getting Around</a></li>
+                <li><a href="day_trips.html">Day Trips</a></li>
+                <li><a href="safety.html">Safety Tips</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main content area of the attractions page -->
+    <main>
+        <!-- coloured band containing the main page title -->
+        <section class="page-title-band">
+            <h1>Milan's Must-See Attractions</h1>
+        </section>
+        
+        <!-- wrapper div for the main content sections contatining attraction details -->
+        <div class="content-section"> 
+            <!-- image container for the attractions item (same as food on this page). 'reveal' class enables scroll animation effect-->
+            <section class="food-item reveal"> 
+                <div class="food-image">
+                    <img src="images/attraction-duomo.jpg" alt="Milan Duomo cathedral facade"> 
+                </div>
+                <div class="food-text">
+                    <h2>Duomo di Milano</h2>
+                    <p>Milan's breathtaking centrepiece, the Duomo, is a masterpiece of Gothic architecture that took nearly six centuries to complete. Look out for its intricate spires, detailed statues, and stunning stained glass windows. Don't miss the opportunity to walk on the rooftop terraces for unforgettable panoramic views of the city.</p>
+                    <p>It's the largest church in Italy and an absolute must-see.</p>
+                </div>
+            </section>
+            
+            <!-- start of an alternate layout attractions item block -->
+            <section class="food-item alt-layout reveal"> 
+                <div class="food-image">
+                    <img src="images/attraction-gallery.jpg" alt="Interior of Galleria Vittorio Emanuele II"> 
+                </div>
+                <div class="food-text">
+                    <h2>Galleria Vittorio Emanuele II</h2>
+                    <p>Right next to the Duomo, step into one of the world's oldest and most glamorous shopping malls. The Galleria is renowned for its stunning glass-vaulted arcades, intricate mosaics (including the famous Turin bull), and high-end boutiques like Prada, Gucci and Louis Vuitton.</p>
+                    <p>Even if you're just window shopping, the architecture itself is worth the visit.</p>
+                </div>
+            </section>
+            <!-- start of a regular layout attractions item block -->
+            <section class="food-item reveal"> 
+                <div class="food-image">
+                    <img src="images/attraction-castle.jpg" alt="Sforzesco Castle"> 
+                </div>
+                <div class="food-text">
+                    <h2>Castello Sforzesco</h2>
+                    <p>Once a powerful fortress for Milan's ruling families, Sforzesco Castle is now a cultural hub housing several museums and art collections. Explore its grand courtyards and discover treasures including Michelangelo's final, unfinished sculpture, the Rondanini Pietà, and works by Leonardo da Vinci.</p>
+                     <p>Behind the castle lies Parco Sempione, a large park perfect for a relaxing stroll.</p>
+               </div>
+            </section>
+            <!-- start of an alternate layout attractions item block -->
+            <section class="food-item alt-layout reveal"> 
+                <div class="food-image">
+                    <img src="images/attraction-lastsupper.jpg" alt="Santa Maria delle Grazie church"> 
+                </div>
+                <div class="food-text">
+                    <h2>The Last Supper (Santa Maria delle Grazie)</h2>
+                    <p>Head to the Convent of Santa Maria delle Grazie to view Leonardo da Vinci's incredibly famous painting, 'The Last Supper'. The well-known mural shows the moment Jesus tells his apostles that one of them is going to betray him.</p>
+                    <p><strong>Important:</strong> Viewing is strictly limited and tickets must be booked months in advance.</p>
+                </div>
+            </section>
+            <!-- start of a regular layout attractions item block -->
+            <section class="food-item reveal">
+                <div class="food-image">
+                     <img src="images/attraction-navigli.jpg" alt="Navigli canal at dusk"> 
+                 </div>
+                 <div class="food-text">
+                     <h2>Navigli District</h2>
+                     <p>Experience Milan's vibrant nightlife in the Navigli district, centred around the city's historic canals (Naviglio Grande and Naviglio Pavese). Once vital waterways, they are now lined with bustling bars, restaurants, unique shops, and art galleries.</p>
+                     <p>It's the perfect place to enjoy the Milanese tradition of aperitivo as the sun sets.</p>
+                 </div>
+             </section>
+            <!-- start of an alternate layout attractions item block -->
+             <section class="food-item alt-layout reveal"> 
+                <div class="food-image">
+                    <img src="images/attraction-brera.jpg" alt="Interior gallery view of the Pinacoteca di Brera"> 
+                </div>
+                <div class="food-text">
+                    <h2>Pinacoteca di Brera</h2>
+                    <p>Located in the charming Brera district, this is Milan's main public gallery for paintings. The Pinacoteca di Brera houses a world-class collection of Italian art, particularly masterpieces from the Venetian and Lombard schools, including works by Raphael, Caravaggio, Bellini, and Mantegna.</p>
+                    <p>The surrounding Brera neighbourhood is also delightful to explore with its cobbled streets and artistic atmosphere.</p>
+                </div>
+            </section>
+
+        </div> 
+    </main>
+    
+    <!-- site footer -->
+    <footer class="site-footer">
+        <p style="text-align:center;">&copy; 2025 Milan Explorer | Created by Sebastians Zudie (24336063) | <a href="#top">Back to Top</a></p> 
+    </footer>
+
+    <!-- link to JavaScript file for interactivity -->
+    <script src="script.js"></script>
+</body>
+</html>
