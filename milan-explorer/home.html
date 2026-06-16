@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- ensure the browser uses the actual screen width for layout calculations-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Visit Milan - Home</title>
+    <!-- link to the main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+    
+<body>
+    <!-- site header: contains logo and main navigation -->
+    <header class="site-header">
+        <div class="logo">
+            <a href="home.html">
+                <img src="images/milan-coat-of-arms.png" alt="Milan Coat of Arms" class="logo-image">
+                MILAN EXPLORER
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="food_drink.html">Food & Drink</a></li>
+                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="getting_around.html">Getting Around</a></li> <li><a href="day_trips.html">Day Trips</a></li>
+                <li><a href="safety.html">Safety Tips</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main content area of the page -->
+    <main>
+        
+        <!-- introductory line -->
+        <div class="content-section" style="text-align: center; padding-top: 20px; padding-bottom: 0; margin-top: 0; margin-bottom: 0;">
+            <p style="font-size: 1.1em; font-style: italic; text-align: center;">Discover the fashion, history, and vibrant life of Italy's most dynamic city.</p>
+        </div>
+        
+        <!-- image slideshow section -->
+        <section class="slideshow-container">
+            <div class="slides fade">
+                <img src="images/milan1.jpg" alt="Milan Scenery 1" style="width:100%"> 
+            </div>
+            <!-- individual slides -->
+            <div class="slides fade">
+                <img src="images/milan2.jpg" alt="Milan Scenery 2" style="width:100%"> 
+            </div>
+            <div class="slides fade">
+                <img src="images/milan3.jpg" alt="Milan Scenery 3" style="width:100%">
+             </div>
+            <div class="slides fade">
+                <img src="images/milan4.jpg" alt="Milan Scenery 4" style="width:100%"> 
+            </div>
+            <div class="slides fade">
+                <img src="images/milan5.jpg" alt="Milan Scenery 5" style="width:100%">
+             </div>
+            
+            <!-- slideshow navigation arrows -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- slideshow navigation dots -->
+            <div class="dots-container" style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+        </section>
+
+        <!-- introductory text section -->
+        <section class="intro-text content-section">
+            <h2>Discover Milan</h2>
+            <p>Welcome to Milan, a bustling metropolis where fashion, history, and modernity collide. From world-renowned design houses and stunning Gothic architecture to vibrant neighbourhoods and exquisite cuisine, Milan offers an unforgettable experience for every traveler.</p>
+            <p>Explore iconic landmarks, indulge in aperitivo, and immerse yourself in the energetic Italian lifestyle. This guide will help you uncover the best of Milan.</p>
+        </section>
+
+        <!-- grid showing key Milan features -->
+        <section class="features-grid content-section">
+
+            <!--feature boxes, structures repeated for each highlight -->
+            <!-- box-overlay makes an overlay appear on hover for better readability--> 
+            <div class="feature-box">
+                <img src="images/feature-fashion.jpg" alt="High-fashion display in Milan's Quadrilatero della Moda"> <div class="box-overlay">
+                    <h3>World Fashion Capital</h3>
+                    <p>Explore the Quadrilatero della Moda, home to the world's most prestigious designers.</p>
+                </div>
+            </div>
+
+            <div class="feature-box">
+                <img src="images/feature-duomo.jpg" alt="Close-up of Milan Duomo"> <div class="box-overlay">
+                    <h3>The Majestic Duomo</h3>
+                    <p>Ascend Milan's breathtaking Gothic cathedral for intricate details and panoramic city views.</p>
+                </div>
+            </div>
+
+            <div class="feature-box">
+                <img src="images/feature-art.jpg" alt="Santa Maria delle Grazie church"> <div class="box-overlay">
+                    <h3>Artistic Masterpieces</h3>
+                    <p>Witness Da Vinci's "The Last Supper," explore art at Brera, or experience opera at La Scala.</p>
+                </div>
+            </div>
+
+            <div class="feature-box">
+                <img src="images/feature-navigli.jpg" alt="Photo of Navigli District"> <div class="box-overlay">
+                    <h3>Navigli Canals & Aperitivo</h3>
+                    <p>Stroll along historic canals and enjoy the vibrant evening atmosphere with Milan's beloved aperitivo.</p>
+                </div>
+            </div>
+
+            <div class="feature-box">
+                <img src="images/feature-castle.jpg" alt="View of the main tower of Sforzesco Castle"> <div class="box-overlay">
+                    <h3>Sforzesco Castle & History</h3>
+                    <p>Explore this imposing fortress housing museums and art collections, including Michelangelo's work.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- enquiry form section -->
+        <section class="enquiry-form content-section">
+            <h2>Have Questions? Contact Us!</h2>
+            <!-- form submission handled by js-->
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                 <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                 </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                 <button type="submit">Send Enquiry</button>
+                 <!-- message are for form feedback (success/error) -->
+                 <div id="form-message"></div> 
+            </form>
+        </section>
+    </main>
+    
+    <!-- site footer -->
+    <footer class="site-footer">
+        <p style="text-align:center;">&copy; 2025 Milan Explorer | Created by Sebastians Zudie (24336063) | <a href="#top">Back to Top</a></p> 
+    </footer>
+    <!-- link to JavaScript file for slideshow, form validaton, etc.) -->
+    <script src="script.js"></script>
+
+    </body>
+</html>
